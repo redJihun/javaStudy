@@ -1,0 +1,51 @@
+package algorythmHW01vol2;
+
+import java.io.*;
+import java.util.*;
+
+
+
+public class lms181009 {
+	 public static void sortArray(Object[][] arr)
+	    {
+	        Arrays.sort(arr, new Comparator<OBJECT[]>() {
+	            public int compare(Object[] arr1, Object[] arr2) {
+	                if( ((Comparable)arr1[1]).compareTo(arr2[1]) < 0 )
+	                    return 1;
+	                else
+	                    return -1;
+	            }
+	        });
+	    }
+	public static void main(String[] args) throws IOException{
+		int i = 0;	// 인덱스로 이용할 변수
+		String line = "";	// 파일 한 줄 읽어올 문자열
+		String lineSaver[] = new String[8];	// 읽어온 문자열을 순서대로 저장할 문자열 배열
+		String splitedLine[][] = new String[8][];	// OS점수와 이름 대소 비교를 위한 이중배열 
+		
+		/*******************************************/
+		// os1.dat을 만들기 위한 코드
+		PrintWriter pwriter = new PrintWriter("./os1.dat");
+		pwriter.print("Name\tOS\tDC\tCC\r\n"
+				+ "Lee\t60\t30\t40\r\n"
+				+ "Kim\t90\t80\t90\r\n"
+				+ "Bae\t90\t62\t89\r\n"
+				+ "Park\t90\t90\t94\r\n"
+				+ "Chun\t40\t50\t46\r\n"
+				+ "Shin\t60\t70\t67\r\n"
+				+ "Chun\t79\t92\t64");
+		pwriter.close();
+		/*******************************************/
+		
+		File file = new File("./os1.dat");
+		Scanner scanner = new Scanner(file);
+		
+		while(scanner.hasNextLine()) {
+			line = scanner.nextLine();
+			splitedLine[i] = line.split("\t");
+		}
+		scanner.close();
+		
+		
+	}
+}

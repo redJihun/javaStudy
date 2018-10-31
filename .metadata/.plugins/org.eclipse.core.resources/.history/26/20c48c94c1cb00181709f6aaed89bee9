@@ -1,0 +1,11 @@
+package algorythmHW01vol2;
+
+import java.io.*;
+import java.util.*;
+
+public class lms181009 {
+	public static void main(String[] args) throws IOEcxeption{
+		PrintWriter pwriter = new PrintWriter("./os1.dat");
+		pwriter.print
+	}
+}

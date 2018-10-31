@@ -1,0 +1,26 @@
+package laterMiddle;
+
+
+class Animal{
+	String name;
+	int age;
+	public Animal() { }
+	public Animal(String name, int age) { 
+		this.name = name;     
+		this.age = age;	}
+}
+class Animal2 extends Animal {    
+	String name;     
+	String color;   
+	public Animal2(String name, String color) { 
+		this.name = name;     
+		this.color = color;	}    
+} 
+public class hjh181031 {
+	public static void main(String[] args) {
+		Animal myAnimal;
+		Animal2 myAnimal2 = new Animal2("Horse", "White");	
+		myAnimal = myAnimal2;   //UpCasting
+		
+}}
+ 

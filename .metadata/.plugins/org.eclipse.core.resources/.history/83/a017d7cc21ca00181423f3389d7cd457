@@ -1,0 +1,13 @@
+package algorithmHW01;
+
+import java.io.PrintWriter;
+import java.io.IOException;
+import java.io.File;
+
+public class hjh181007 {
+	public static void main(String[] args) throws IOException{
+		PrintWriter pw = new PrintWriter("");
+		File path =new File(".");
+		System.out.println(path.getAbsolutePath());
+	}
+}

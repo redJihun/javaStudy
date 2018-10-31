@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;prac04_06.CIrcleManager_20174330&apos; to &apos;CircleManager_20174330&apos;&#x0D;&#x0A;- Original project: &apos;prac04_06&apos;&#x0D;&#x0A;- Original element: &apos;prac04_06.CIrcleManager_20174330&apos;&#x0D;&#x0A;- Renamed element: &apos;prac04_06.CircleManager_20174330&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;CIrcleManager_20174330&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;prac04_06{CIrcleManager_20174330.java[CIrcleManager_20174330" matchStrategy="1" name="CircleManager_20174330" qualified="false" references="true" similarDeclarations="false" stamp="1539618494982" textual="false" version="1.0"/>
+</session>

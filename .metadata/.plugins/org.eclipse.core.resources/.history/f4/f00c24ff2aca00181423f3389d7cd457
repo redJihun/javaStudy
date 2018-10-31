@@ -1,0 +1,41 @@
+package algorithmHW01;
+
+import java.io.PrintWriter;
+import java.io.IOException;
+import java.io.File;
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+
+public class hjh181007 {
+	public static void main(String[] args) throws IOException{
+		PrintWriter pw = new PrintWriter("./os1.dat");		//
+		pw.println("Name\tOS\tDC\tCC");
+		pw.println("Lee\t60\t30\t40");
+		pw.println("Kim\t90\t80\t90");
+		pw.println("Bae\t90\t62\t89");
+		pw.println("Park\t90\t90\t94");
+		pw.println("Chun\t40\t50\t46");
+		pw.println("Shin\t60\t70\t67");
+		pw.println("Chung\t79\t92\t64");
+		pw.close();
+		
+		File file = new File("./os1.dat");
+		FileReader fr = new FileReader(file);
+		BufferedReader br = new BufferedReader(fr);
+		PrintWriter pw2 = new PrintWriter("./os2.dat");
+		String line = "";
+		line = br.readLine();
+		pw2.println("No\t" + line + "\tAve");
+		int i = 1;
+		while((line = br.readLine()) != null) {
+			pw2.println(i + "\t" + line);
+			i++;
+		}
+		pw2.println("1-40: ");
+		pw2.println("41-80: ");
+		pw2.println("81-100: ");
+		br.close();
+		pw2.close();
+	}
+}

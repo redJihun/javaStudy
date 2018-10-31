@@ -1,0 +1,6 @@
+package TaeWan01;
+
+
+public class gogojava {
+	
+}

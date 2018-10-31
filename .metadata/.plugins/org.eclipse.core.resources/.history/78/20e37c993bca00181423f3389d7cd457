@@ -1,0 +1,71 @@
+package algorithmHW01;
+
+import java.io.PrintWriter;
+import java.io.IOException;
+import java.io.File;
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+
+class Student{
+	String name="";
+	int OS=0;
+	int DC=0;
+	int CC=0;
+	double Ave=0;
+	public Student(String n, int o, int d, int c) {
+		this.name = n;
+		this.OS = o;
+		this.DC = d;
+		this.CC = c;
+		this.Ave = ((double)o + (double)d + (double)c) / 3;
+	}
+}
+public class hjh181007 {
+	public static void main(String[] args) throws IOException{
+		// os1.dat 颇老阑 积己
+		PrintWriter pw = new PrintWriter("./os1.dat");
+		pw.println("Name\tOS\tDC\tCC");
+		pw.println("Lee\t60\t30\t40");
+		pw.println("Kim\t90\t80\t90");
+		pw.println("Bae\t90\t62\t89");
+		pw.println("Park\t90\t90\t94");
+		pw.println("Chun\t40\t50\t46");
+		pw.println("Shin\t60\t70\t67");
+		pw.println("Chung\t79\t92\t64");
+		pw.close();
+		
+		// os1.dat 颇老阑 阂矾客辑 os2.dat 颇老 积己
+		Student sArray[] = new Student[7];
+		File file = new File("./os1.dat");
+		FileReader fr = new FileReader(file);
+		BufferedReader br = new BufferedReader(fr);
+		PrintWriter pw2 = new PrintWriter("./os2.dat");
+		String line = "";
+		line = br.readLine();
+		pw2.println("No\t" + line + "\tAve");
+		
+		String tempArray[] = line.split("\t");
+		for(int i=0; i<sArray.length; i++) {
+			sArray[i].name = String.valueOf(tempArray[0]);
+			sArray[i].OS = Integer.valueOf(tempArray[1]);
+			sArray[i].DC = Integer.valueOf(tempArray[2]);
+			sArray[i].CC = Integer.valueOf(tempArray[3]);
+//			System.out.println(sArray[i].name+"\t"+sArray[i].OS+"\t"+sArray[i].DC+"\t"+sArray[i].CC);
+			
+		}
+		int j = 1;
+		while((line = br.readLine()) != null) {
+			pw2.println(j + "\t" + line);
+			j++;
+		}
+		pw2.println();
+		pw2.println("1-40: ");
+		pw2.println("41-80: ");
+		pw2.println("81-100: ");
+		pw2.println();
+		pw2.println("OS: " + "\tDC: " + "\tCC: " + "\tTotal AVE: ");
+		br.close();
+		pw2.close();
+	}
+}

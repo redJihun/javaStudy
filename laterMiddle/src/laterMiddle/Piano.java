@@ -1,0 +1,20 @@
+package laterMiddle;
+
+abstract class Instrument {
+	abstract public void play();
+	abstract public void volumeUp();
+	abstract public void volumeDown();
+}
+
+public class Piano extends Instrument{
+	public void play() { System.out.println("Piano : play ( ) »£√‚µ  "); }
+	public void volumeUp() {System.out.println("Piano : volumeUp ( ) »£√‚µ  ");}
+	public void volumeDown() {System.out.println("Piano : volumeDown ( ) »£√‚µ  ");}
+	
+	public static void main(String[] args) {
+		Piano p = new Piano();
+		p.volumeUp();
+		p.volumeDown();
+		p.play();
+		}
+}

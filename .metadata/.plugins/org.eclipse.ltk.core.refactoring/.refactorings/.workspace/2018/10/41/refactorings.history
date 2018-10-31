@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;algorythmHW01(vol2)&apos; to &apos;algorythmHW01vol2&apos;&#x0D;&#x0A;- Original element: &apos;algorythmHW01(vol2)&apos;&#x0D;&#x0A;- Renamed element: &apos;algorythmHW01(vol2)&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;algorythmHW01(vol2)&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=algorythmHW01\(vol2)" name="algorythmHW01vol2" references="true" stamp="1539087871830" version="1.0"/>
+</session>

@@ -1,0 +1,36 @@
+package laterMiddle;
+
+
+class Animal{
+	String name;
+	int age;
+	
+	public void speak() {System.out.println("Animal speak");}
+	public void walk() {System.out.println("Animal walk");}
+}
+class Animal2 extends Animal {    
+	String name;     
+	String color;   
+	
+	public void speak() {System.out.println("Animal2 speak");}
+	public void walk() {System.out.println("Animal2 walk");}
+} 
+public class hjh181031 {
+	public static void main(String[] args) {
+		Animal myAnimal = new Animal();
+		Animal2 myAnimal2 = new Animal2();
+		
+		myAnimal.speak();
+		myAnimal.walk();
+		myAnimal2.speak();
+		myAnimal2.walk();
+		
+		myAnimal = myAnimal2;	//upCasting
+		myAnimal.speak();
+		myAnimal.walk();
+		myAnimal2.speak();
+		myAnimal2.walk();
+		
+		
+}}
+ 
